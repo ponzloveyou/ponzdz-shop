@@ -956,11 +956,8 @@ ACCORDION
     transition:.35s ease;
 
 }
-
 .accordion.active .accordion-content{
-
-    max-height:500px;
-
+    max-height:1000px;
 }
 /*==================================================
 ABOUT
@@ -2441,34 +2438,6 @@ border:none;
 display:none;
 
 }
-
-}
-
-/*==================================
-ACCORDION
-==================================*/
-
-.accordion-item{
-
-overflow:hidden;
-
-border-radius:18px;
-
-}
-
-.accordion-content{
-
-max-height:0;
-
-overflow:hidden;
-
-transition:max-height .4s ease;
-
-}
-
-.accordion-item.open .accordion-content{
-
-max-height:800px;
 
 }
 

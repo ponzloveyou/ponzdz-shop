@@ -406,23 +406,29 @@ if (menuToggle && menu) {
     });
 
 }
-
 /*==================================================
     ACCORDION
 ==================================================*/
 
-document.querySelectorAll(".accordion-header").forEach(header => {
+document.querySelectorAll(".accordion-btn").forEach(button => {
 
-    header.addEventListener("click", () => {
+    button.addEventListener("click", () => {
 
-        const item = header.parentElement;
+        const accordion = button.parentElement;
 
-        item.classList.toggle("open");
+        // Đóng các accordion khác
+        document.querySelectorAll(".accordion").forEach(item => {
+            if (item !== accordion) {
+                item.classList.remove("active");
+            }
+        });
+
+        // Mở/đóng accordion hiện tại
+        accordion.classList.toggle("active");
 
     });
 
 });
-
 /*==================================================
     MOUSE SPOTLIGHT
 ==================================================*/
